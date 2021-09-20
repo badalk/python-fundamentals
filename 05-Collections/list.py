@@ -95,3 +95,50 @@ a
 a.insert(2, "destroyed") # takes the index at which you want to insert the element and the value of the element as parameters
 a
 ' '.join(a) #reconstruct the string with space as a separator
+
+# ###11 - Growing Lists / Working with multiple lists
+# Concataneting two lists using the + operator creates a new list without modifying the existing operads
+m = [2, 1, 3]
+n = [4, 7, 11]
+k = m + n
+k
+# Augumented assignee operator modifies the operator in place
+k += [18, 29, 47]
+k
+# you can also use extend method of the list
+k.extend([76,129, 199])
+k
+# IMPORTANT
+# All of this works with any iterable series not just lists
+
+# ###12 - Reversing and Sorting Lists
+g = [1, 11, 21, 1211, 112111]
+# operations to re-arrange the elements in place
+g
+g.reverse() # reversing in-place
+g
+d = [5, 17, 23, 13, 67, 54, 96, 111, 75, 3456]
+d
+d.sort() # sorting in-place
+d
+# sort method also accepts two more parameters, reverse (true / false) and a key on which to sort
+d.sort(reverse = True)
+d
+# key parameter in the sort method takes any callable object which is then used to extract a key from each item
+# the items then be sorted according to the relative ordering of these keys
+# There are several types of callable objects in Python
+# For ex: built-in len function is a callable object (that is used to determine the lenght of a collection)
+h = 'not perplexing do handwriting family where I illegibly know doctors'.split()
+h
+h.sort(key=len) #sort h list based on the key as a lenght of an item
+h
+' '.join(h)
+
+# sorted and reversed built-in functions. These will work on any finite length iterable source object
+x = [4, 9, 2, 1]
+y = sorted(x) #original list x is un-modified
+y
+p = [9, 3, 1, 0]
+q = reversed(p)
+q # returns list_reverseiterator object
+list(q) # use list constructor to list the items of the list_reverseiterator object
