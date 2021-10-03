@@ -22,6 +22,8 @@ else:
     print('No such file as {}'.format(p))
 
 # ###3 - More pythonic EAFP approach
+# EAFP is standard in python and that philosophy is enabled by exceptions
+# BESTPRACTICE EAPF + Exceptions are much superior in python than and error codes which can be silenced. Exceptions cannot be ignored
 import os
 p = '/path/to/datafile.dat'
 
