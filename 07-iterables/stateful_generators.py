@@ -1,4 +1,4 @@
-###3 Maintaining State in local variables
+###2 Maintaining State in local variables
 # DEFINE Stateful Generators:
 # Generators resume execution
 # Can maintain state in local variables
@@ -19,14 +19,14 @@ def take(count, iterable):
     counter = 0
     for item in iterable:
         if counter == count:
-            return
+            return # Raises StopIteration Exception internally as part of the internally for loop machinary shown below
         counter += 1
         yield item
 
 # Since generators are lazy and only produce values only on request, we will drive execution through a for loop in below function
 def run_take():
     items = [2, 4, 6, 8, 10]
-    for item in take (3, items): # this will take values from generator until it terminates
+    for item in take (3, items): # this will take values from generator until it terminates with StopIteration exception internally. This indicates that the for loop has done its work and exits
         print (item)
 
 if __name__ == '__main__':
