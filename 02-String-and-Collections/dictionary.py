@@ -1,6 +1,6 @@
 # mutable mappings of keys to values
 # also called associative arrays
-# dcitionary literals {k1:v1, k2:v2}
+# dictionary literals {k1:v1, k2:v2}
 
 #simple telephone directory
 directory = {
